@@ -1,0 +1,247 @@
+/* function declaration
+
+speak("hello there!");
+
+ function speak(words) {
+   console.log(words);
+ }
+
+
+*/
+
+
+var person = {
+  name: 'Josh ',
+  speak: function () {
+    console.log("work, work");
+  }
+};
+
+person.speak();
+person.name;
+
+var moreWords = function() {
+  console.log('I come form out of a function');
+}
+
+moreWords();
+
+//addTwoNumbers(4,8); cannot call a function before a fun exp.//
+
+var addTwoNumbers = function(num1, num2){
+  console.log(num1 + num2);
+}
+
+//You can call a function before its defined with a func dec.//
+
+// e.g. addTwoNumbers(2,2); works.
+
+function addTwoNumbers2 (num1, num2){
+  console.log(num1 + num2);
+}
+addTwoNumbers2(2,2);
+
+
+//function with two params.
+
+function sayHello (name) {
+  console.log('hello ' + name);
+}
+
+sayHello('Jeremy');
+sayHello('kim');
+
+//function with multiple params.
+function sum(x, y, z) {
+  console.log( x + y + z);
+}
+sum(4,4,3);
+
+//Write a function that takes a param. The function should 
+//simply console.log() the value of the param.
+//
+function params (words){
+  console.log(words);
+}
+params('stuff' + ' and more stuff');
+
+//We can also use multiple params in our 
+//functions. A function can take any number of params.
+
+var multiply = function(num1,num2) {
+  console.log(num1 * num2);
+};
+
+multiply(9,8);
+
+//Write a function that calculates area.
+
+function calcArea(width, length){
+  console.log(width * length);
+};
+
+calcArea(5, 67);
+
+//Alternate with a return statement. RETURN prints to the 
+//console.
+
+function calcArea2(width, length){
+  var area = width  * length;
+  return area;
+
+}
+calcArea2(1,70);
+calcArea2(4, 50);
+
+//Alt 3 of calcArea with two walls.
+
+function calcArea3 (width,length){
+  var area = width * length;
+  return area;
+}
+
+var wallOne = calcArea3 (1000, 5);
+var wallTwo = calcArea3 (45,6444);
+
+calcArea3(wallOne,wallTwo);
+
+//write a function that takes three parameters (numbers), 
+//sums them, and converts the sum into a string (e.g. '123'),
+//invoke the function a couple of times with different arguments 
+//each time. 
+
+function numToStrings(num1, num2, num3) {
+  var addSum = num1 + num2 + num3;
+  return addSum.toString();
+}
+
+numToStrings(4,5,6);
+numToStrings(5,6,125);
+
+
+//http://www.anyexample.com/webdev/javascript/javascript_string_compare.xml
+
+var st1 = "string";
+var st2 = "string";
+
+function takesTwo (string1,string2) {
+  if (st1 === st2){
+    console.log('same string');
+  } else {
+    console.log("Not working.")
+  }
+ 
+};
+
+takesTwo(st1, st2);
+
+// or 
+
+var sameStrings = function (name1, name2){
+  if (name1 === name2){
+    console.log ('These stirngs are the same.');
+  }
+   else {
+  console.log("These vlaues are not the same.")
+}
+};
+
+sameStrings('Josh', 'Mike');
+sameStrings('Kim', 'Kim');
+
+//supply more arrguments than parameters.
+//Only the first two will be considered.
+
+sameStrings('Kim', 'Kim', 'Mike', 'Tom');
+
+//Fewer.
+
+sameStrings('Kim');
+
+
+var sameStrings = function (name1, name2){
+  if (name1 === name2){
+    console.log ('These stirngs are the same.');
+  }
+   else {
+  console.log("These vlaues are not the same.")
+}
+};
+
+//Return statements. 
+
+function sum(x,y) {
+  return x + y;
+}
+
+sum;
+
+
+//var z 
+
+var z = sum(3,4);
+
+//Here we added a 'z' variable and then called the 'z' to double the return, or
+// do any math we would like. 
+
+function double(z) {
+  return z * 2;
+}
+
+double(z);
+
+var num = sum(3,7); // This funciotn takes the parameters in the 'sum' func, 
+//adds them and up and then 
+
+//doubles them in the double fuction as a nested func. 
+var numDbl = double(num);
+
+numDbl;
+
+//This above example can also be written within a nested function. 
+
+var nestNum = double(sum(500,200));
+
+nestNum;
+
+////////////////////////Return Statements//////////////////////////
+
+//Using a return statement excutes the rest of the function will not run 
+//with a function. 
+
+function speak (words) {
+  return words;
+
+
+//The following statements will not run. 
+
+var x = 1;
+var y = 2;
+console.log( x + y );
+
+  
+}
+
+speak();
+
+///////////////////////To the power of, func.//////////////////////////
+//https://www.w3schools.com/js/js_operators.asp
+
+//Exponent
+
+function toThePower (num1, num2) {
+  return num1 *= num2;
+};
+
+toThePower(2,100); 
+
+
+function plusOne () {
+  return toThePower(6, 7) + 1;
+}
+
+plusOne();
+
+
+
+
